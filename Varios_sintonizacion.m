@@ -51,13 +51,13 @@ bode(Gs/(Gs+1))
 
 %% Asignacion de polos
 % Basic parameters
-T = 0.01;
+T = 0.7269;
 Gz = c2d(Gs,T,'zoh');
 step(Gs,Gz)
 b1 = Gz.Numerator{1}(2);
 a1 = Gz.Denominator{1}(2);
-ts = 10;
-Mp = 0.1;
+ts = 17.5000;
+Mp = 0.05;
 Xi = -log(Mp)/sqrt(log(Mp)^2 + pi^2);
 Wn = 4/(ts*Xi);
 Mag = exp(-Xi*Wn*T);
